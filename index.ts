@@ -1,12 +1,33 @@
-import express = require("express")
+import * as express from "express"
+import * as http from "http"
+import {join} from "path"
+import * as logger from "morgan"
+import * as bodyParser from "body-parser"
+import * as cookieParser from "cookie-parser"
 
-let app = express();
-let port = 3000;
+const app: express.Express = express();
+const port: number = 3000;
 
-app.get('/', function(req, res) {
-   res.send("Hello, world!");
+
+app.use(logger("dev"));
+app.use(bodyParser.json());
+app.use(cookieParser());
+
+app.use(express.static(join(__dirname, "public")));
+app.route("/")
+    .get((req: express.Request, res: express.Response, next: express.NextFunction) => {
+        res.send("Hello, world!");
+        next();
+    });
+
+const server: http.Server = http.createServer(app);
+
+server.listen(port);
+
+server.on('error', (e: Error) => {
+    console.log("Error starting server" + e)
 });
 
-app.listen(port, function() {
-    console.log(`Atacama is now listening on port ${port}`)
+server.on("listening", () => {
+    console.log(`Atacama started on port ${port}`);
 });
