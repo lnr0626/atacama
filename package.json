@@ -1,0 +1,32 @@
+{
+  "name": "atacama",
+  "version": "1.0.0",
+  "description": "Public Domain eBook discovery and reading site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jm2242/atacama.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/jm2242/atacama/issues"
+  },
+  "homepage": "https://github.com/jm2242/atacama#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "nodemon": "^1.11.0",
+    "ts-node": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.5",
+    "ts-node": "^2.1.0",
+    "typescript": "^2.2.1"
+  }
+}
