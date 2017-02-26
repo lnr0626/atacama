@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node ./index.ts",
-    "monitor": "nodemon ./index.ts",
-    "bootstrap": "npm install -g typescript ts-node"
+    "monitor": "nodemon ./index.ts"
   },
   "repository": {
     "type": "git",
