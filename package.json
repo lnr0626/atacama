@@ -5,15 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts"
+    "start": "ts-node ./index.ts",
+    "monitor": "nodemon ./index.ts",
+    "bootstrap": "npm install -g typescript ts-node"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jm2242/atacama.git"
   },
   "author": "",
-  "license": "ISC",
   "private": true,
   "bugs": {
     "url": "https://github.com/jm2242/atacama/issues"
@@ -22,11 +22,10 @@
   "dependencies": {
     "express": "^4.14.1",
     "nodemon": "^1.11.0",
-    "ts-node": "^2.1.0"
+    "typescript": "^2.2.1"
   },
   "devDependencies": {
-    "@types/node": "^7.0.5",
-    "ts-node": "^2.1.0",
-    "typescript": "^2.2.1"
+    "@types/express": "^4.0.35",
+    "@types/node": "^7.0.5"
   }
 }
