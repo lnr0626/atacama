@@ -13,10 +13,11 @@
         of how node handles globally installed packages. If you're not comfortable 
         doing this, this step is not required, it just provides some convenience 
         for auto restarting the server on changes.
-3. Run `yarn start`
-4. Go [here](http://localhost:3000/)
+4. Run `yarn install` to install the `package.json` dependencies
+5. Run `yarn start`
+6. Go [here](http://localhost:3000/)
     - You should see Hello, World!
-4. Go [here](http://localhost:3000/test.html)
+7. Go [here](http://localhost:3000/test.html)
     - You should see in bold "This is to ensure the static mappings are working."
     
 Congrats, you have verified that your dev environment is setup.
