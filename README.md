@@ -16,5 +16,9 @@
 3. Run `yarn start`
 4. Go to http://localhost:3000/
     - You should see Hello, World!
+4. Go to http://localhost:3000/test.html
+    - You should see in bold "This is to ensure the static mappings are working."
+    
+Congrats, you have verified that your dev environment is setup.
     
 To have yarn monitor for changes and restart the server when it detects those, run `yarn run monitor`
