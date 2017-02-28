@@ -1,13 +1,13 @@
-import * as express from "express"
-import * as http from "http"
+// @flow
+import express from "express"
+import http from "http"
 import {join} from "path"
-import * as logger from "morgan"
-import * as bodyParser from "body-parser"
-import * as cookieParser from "cookie-parser"
+import logger from "morgan"
+import bodyParser from "body-parser"
+import cookieParser from "cookie-parser"
 
 const app: express.Express = express();
 const port: number = 3000;
-
 
 app.use(logger("dev"));
 app.use(bodyParser.json());
@@ -20,12 +20,12 @@ app.route("/")
         next();
     });
 
-const server: http.Server = http.createServer(app);
+const server = http.createServer(app);
 
 server.listen(port);
 
 server.on('error', (e: Error) => {
-    console.log("Error starting server" + e)
+    console.log("Error starting server" + e.message)
 });
 
 server.on("listening", () => {
