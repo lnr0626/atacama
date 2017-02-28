@@ -1,6 +1,5 @@
 {
   "execMap": {
-    "ts": "ts-node",
     "js": "babel-node"
   }
 }
