@@ -7,8 +7,8 @@
         - I am on version 6.10.0 (this is the latest LTS as of 2017-02-26)
     - [Yarn](https://yarnpkg.com/en/docs/install)
 2. Clone the project
-3. Run `yarn global add babel-cli`
-    - This command globally install babel-clie so that nodemon will work
+3. Run `yarn global add babel-cli flow-bin`
+    - This command globally install babel-cli and flow
     - If you're on osx or linux, you may need to run this command using sudo because 
         of how node handles globally installed packages. If you're not comfortable 
         doing this, this step is not required, it just provides some convenience 
