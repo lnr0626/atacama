@@ -7,7 +7,7 @@ import bodyParser from "body-parser"
 import cookieParser from "cookie-parser"
 
 const app: express.Express = express();
-const port: number = 3000;
+const port: number = process.env.PORT || 3000;
 
 app.use(logger("dev"));
 app.use(bodyParser.json());
